@@ -4,9 +4,10 @@ from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 from datetime import date
 import html 
+import os
 
-SLACK_TOKEN = "xoxb-9066268312470-9071244937893-jUxxcjxCie9GNuWrKr7niycs"
-CHANNEL_ID = "C091PL1RW79" 
+SLACK_TOKEN = os.environ["SLACK_TOKEN"]
+CHANNEL_ID = os.environ["CHANNEL_ID"]
 
 def crawl_and_parse():
     today = date.today().strftime("%Y-%m-%d")
