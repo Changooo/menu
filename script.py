@@ -56,6 +56,5 @@ def post_to_slack(message):
         print(f"Slack Error: {e.response['error']}")
 
 if __name__ == "__main__":
-    # msg = crawl_and_parse()
-    # post_to_slack(msg)
-    post_to_slack("동원홈푸드 운영 종료로 메뉴 알림이 잠정 중단됩니다.")
+    msg = crawl_and_parse()
+    post_to_slack(msg)
